@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+
+  express-typescript:
+    environment:
+      - NODE_ENV=development
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+    container_name: express-typescript
+    expose:
+      - '3000'
+    ports:
+      - '3000:3000'
+    command: npm run dev
+
+  # mongodb-container:
+  #   image: mongo:latest
+  #   environment:
+  #     MONGO_INITDB_ROOT_USERNAME: admin
+  #     MONGO_INITDB_ROOT_PASSWORD: admin
+  #   ports:
+  #     - 27017:27017
+  #   volumes:
+  #     - ./mongodb_data:/data/db

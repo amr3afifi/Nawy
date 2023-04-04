@@ -1,0 +1,75 @@
+
+# dependencies
+Front/node_modules
+Front/.pnp
+Front/.pnp.js
+
+# testing
+Front/coverage
+
+# next.js
+Front/.next/
+Front/out/
+
+# production
+Front/build
+
+# misc
+Front/.DS_Store
+
+# debug
+Front/npm-debug.log*
+Front/yarn-debug.log*
+Front/yarn-error.log*
+
+# local env files
+Front/.env.local
+Front/.env.development.local
+Front/.env.test.local
+Front/.env.production.local
+
+###########################################################################
+# dependencies
+Back/node_modules
+Back/.pnp
+Back/.pnp.js
+
+# testing
+Back/coverage
+
+# production
+Back/build
+
+# misc
+Back/.DS_Store
+
+# debug
+Back/npm-debug.log*
+Back/yarn-debug.log*
+Back/yarn-error.log*
+
+# local env files
+Back/.env.local
+Back/.env.development.local
+Back/.env.test.local
+Back/.env.production.local
+
+###########################################################################
+
+Mobile/nawypropfind/node_modules/
+Mobile/nawypropfind/.expo/
+Mobile/nawypropfind/dist/
+Mobile/nawypropfind/npm-debug.*
+Mobile/nawypropfind/*.jks
+Mobile/nawypropfind/*.p8
+Mobile/nawypropfind/*.p12
+Mobile/nawypropfind/*.key
+Mobile/nawypropfind/*.mobileprovision
+Mobile/nawypropfind/*.orig.*
+Mobile/nawypropfind/web-build/
+
+# macOS
+Mobile/nawypropfind/.DS_Store
+
+# Temporary files created by Metro to check the health of the file watcher
+Mobile/nawypropfind/.metro-health-check*
