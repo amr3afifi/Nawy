@@ -7,7 +7,7 @@ export const getAllProperties = async (req: express.Request, res: express.Respon
     return res.status(200).json(properties);
   } catch (error) {
     console.log(error);
-    return res.sendStatus(400);
+    return res.status(400).json({message: error.message })
   }
 };
 
@@ -20,7 +20,7 @@ export const deleteProperty = async (req: express.Request, res: express.Response
 
   } catch (error) {
     console.log(error);
-    return res.sendStatus(400);
+    return res.status(400).json({deleted:false,message: error.message })
   }
 }
 
@@ -31,9 +31,9 @@ export const getProperty = async (req: express.Request, res: express.Response) =
     const property = await propertyModel.getPropertyByID(id);
     return res.json(property);
 
-  } catch (error) {
+  } catch ( error) {
     console.log(error);
-    return res.sendStatus(400);
+    return res.status(400).json({found:false,message: error.message })
   }
 }
 
@@ -47,7 +47,7 @@ export const editProperty = async (req: express.Request, res: express.Response) 
 
   } catch (error) {
     console.log(error);
-    return res.sendStatus(400);
+    return res.status(400).json({updated:false,message: error.message })
   }
 }
 
@@ -59,30 +59,8 @@ export const addProperty = async (req: express.Request, res: express.Response) =
     
   } catch (error) {
     console.log(error);
-    return res.sendStatus(400);
+    return res.status(400).json({added:false,message: error.message })
   }
 }
-
-// export const updateUser = async (req: express.Request, res: express.Response) => {
-//   try {
-//     const { id } = req.params;
-//     const { username } = req.body;
-
-//     if (!username) {
-//       return res.sendStatus(400);
-//     }
-
-//     const user = await getUserById(id);
-    
-//     user.username = username;
-//     await user.save();
-
-//     return res.status(200).json(user).end();
-//   } catch (error) {
-//     console.log(error);
-//     return res.sendStatus(400);
-//   }
-// }
-
 
 

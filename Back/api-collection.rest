@@ -10,18 +10,18 @@ Content-Type: application/json
     "title": "Villa Super Lux Lo2ta",
     "project": "Cairo Festival City",
     "developer": "Safwa",
-    "delivery_date": "01-01-2023",
+    "delivery_date": "10-01-2049",
     "owner":{
         "name": "Ahmed Shobeer",
-        "phone_number": "013223232"
+        "phone_number": "53533"
     },
     "type":"studio",
-    "city": "New Cairo",
+    "city": 55,
     "size": 305 ,
     "price": 2000000,
     "bathrooms": 3,
-    "bedrooms": 4,
-    "images":["https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?cs=srgb&dl=pexels-binyamin-mellish-1396122.jpg&fm=jpg"]
+    "bedrooms": 2,
+    "details": "wallahi sha2a gamda hat3gbak awi"
     
 }
 
@@ -30,10 +30,10 @@ Content-Type: application/json
 DELETE   http://localhost:8080/property/642838aacc58ea3af1254b33
 ###
 
-GET   http://localhost:8080/property/64288b43a745ae1919648f9d
+GET   http://localhost:8080/property/64288b43745ae1919648f9d
 ###
 
-PUT   http://localhost:8080/property/64288b43a745ae1919648f9d
+PUT   http://localhost:8080/property/64288b43a745ae19196948f9d
 Content-Type: application/json
 
 {

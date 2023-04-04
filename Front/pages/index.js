@@ -7,7 +7,7 @@ import Image from 'next/image'
 import MyLogo from '../public/nawy.svg'
 
 export async function getStaticProps() {
-  const properties = await axios.get('http://localhost:8080/properties').then(res => {
+  const properties = await axios.get(process.env.BASE_URL+'properties').then(res => {
                       if(res.status===200)
                       {                       
                         return res.data

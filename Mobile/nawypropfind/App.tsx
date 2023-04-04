@@ -82,6 +82,7 @@ React.useEffect(() => {
       <Modal animationType="slide"  transparent={true} visible={modalVisible}>
               <View style={styles.modalView}>
                 <Button labelStyle={{color:'#0070f3'}} onPress={() => setModalVisible(!modalVisible)}> Close</Button>
+                <Text></Text>
                 <Card style={{width:'100%'}}>
                 <Card.Cover source={{uri:propertyDetails.images[0]}} />
                 </Card>
@@ -176,7 +177,7 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 5,
     width: '90%',
-    height: '90%',
+    height: '95%',
     marginTop:75
   },
 
