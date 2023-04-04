@@ -7,7 +7,7 @@
 3. Change the BASE_URL in the .env file with url of your backend server (by default it's on 'http://localhost:8080/')
 4. Server will be live on http://localhost:3000
 
-#### Backend:
+### Backend:
 1. cd ./Back
 2. npm run dev
 3. By Default Server will be live on http://localhost:8080 or you can change port and Db url in the .env file

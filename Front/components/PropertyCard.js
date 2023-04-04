@@ -1,4 +1,6 @@
-import styles from '../styles/Home.module.css';
+import homeStyles from '../styles/Home.module.css';
+import propertyCardStyles from '../styles/PropertyCard.module.css';
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios';
 
@@ -12,17 +14,19 @@ function PropertyCard({ property }) {
       };
 
     const deleteProperty = () => {
-        console.log("http://localhost:8080/property/"+property._id)
-    axios.delete("http://192.168.100.3:8080/property/"+property._id).then(response => {
+    var url= process.env.BASE_URL || "http://localhost:8080/"
+    axios.delete(url+'property/'+property._id).then(response => {
               console.log('--------------Response (deleteProperty)-------------\n',response.data);
+              location.reload();
+
     }).catch(error => console.log(error));
     };
 
 return (
 
-    <div className={styles.grid}>
+    <div className={homeStyles.grid}>
  
-        <div className={styles.card} >
+        <div className={propertyCardStyles.card} >
             <img className="card-img-top" src={property.images} alt="Property Img"/>
             <div className="card-body">
                 <br></br>
@@ -46,8 +50,7 @@ return (
             </div>
         </div>
 
-        <div className="d-flex">
-            <div className="modal fade" id={'propDetails'+property._id} tabIndex="-1"  aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal fade p-5" id={'propDetails'+property._id} tabIndex="-1"  aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog">
                     <div className="modal-content">
 
@@ -74,7 +77,6 @@ return (
                     </div>
                 </div>
             </div>
-        </div>
 
     </div>
 

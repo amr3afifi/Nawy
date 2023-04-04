@@ -27,7 +27,7 @@ Content-Type: application/json
 
 ###
 
-DELETE   http://localhost:8080/property/642838aacc58ea3af1254b33
+DELETE   http://localhost:8080/property/642c9290cfd2c59a9f49e0e7
 ###
 
 GET   http://localhost:8080/property/64288b43745ae1919648f9d
